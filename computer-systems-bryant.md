@@ -154,6 +154,15 @@ ETTC: 2h
 
 - What does word size correspond to ? >>
 
+
+#### 2.1.3 Addressing and byte ordering 
+
+- What is the most significant bit ? >> The most significant bit (MSB) is the bit in a multiple-bit binary number with the largest value.
+- What is a disassembler ? >>
+- What is referencing and dereferencing ? >> 
+- In what cases is byte ordering important to consider ? >>
+
+
 ### Integer representation
 
 ETTC: 2h

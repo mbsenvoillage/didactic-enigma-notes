@@ -132,16 +132,17 @@ Real number encoding >> floating point encoding
 
 ETTC: 2h
 
-- What is the smallest addressable unit of memory ? >>
-- How does a machine-level program view memory ? >>
-- How is memory identified ? >>
-- What is virtual address space ? >>
-- What is a pointer ? >>
-- What does the value of a pointer in C correspond to ? >>
+- What is the smallest addressable unit of memory ? >> bytes, or blocks of 8 bits
+- How does a machine-level program view memory ? >> as a large array of bytes (virtual memory)
+- How is memory identified ? >> every byte in memory is identified by a unique number known as its address.
+- What is virtual address space ? >> The set of all possible addresses is called VAS. It is an abstraction that covers up the actual implementation of physical memory.
+- What is a pointer ? >> A mechanism for referencing data. Like any other variable it has a type and a value. The value indicates the location of some object, while its type indicates what kind of object is stored at that location.
+- What does the value of a pointer in C correspond to ? >> It corresponds to the virtual address of the first byte of some block of storage.
 
 #### 2.1.1 Hexadecimal notation
 
 - What does a byte consist of ? >>
+- How many bits can one hexadecimal number represent ? >>
 - What is a byte's range expressed in decimal, binary and hexadecimal representation ? >>
 - Why hexadecimal notation ? >>
 - How many values can an hexadecimal representation represent ? >>
@@ -153,15 +154,49 @@ ETTC: 2h
 #### 2.1.2 Data sizes
 
 - What does word size correspond to ? >>
+- What are the two main program sizes ? >>
+- What does `T *p` indicate in C ? >>
+- How many bytes are usually allocated to store an int, a char, a float and a double ? >>
+- Who decides data sizes ? >>
+- How do you make sure in C that an int will have a fixed size regardless of compiler and machine settings ? >>
 
+#### 2.1.3 Addressing and Byte Ordering
 
-#### 2.1.3 Addressing and byte ordering 
-
+- What are the two conventions that must be established for objects that span over multiple bytes ? >>
+- What are the most frequently used conventions ? >>
+- What are the two main conventions for ordering bytes ? >>
+- When can byte ordering become an issue ? >>
 - What is the most significant bit ? >> The most significant bit (MSB) is the bit in a multiple-bit binary number with the largest value.
 - What is a disassembler ? >>
-- What is referencing and dereferencing ? >> 
+- What is referencing and dereferencing ? >>
 - In what cases is byte ordering important to consider ? >>
 
+##### Practice problem
+
+Using show_int and show_float, we determine that the integer 2607352 has hexa- decimal representation 0x0027C8F8, while the floating-point number 3510593.0 has hexadecimal representation 0x4A1F23E0.
+
+A. Write the binary representations of these two hexadecimal values.  
+a) 0000 0000 0010 0111 1100 1000 1111 1000
+b) 0100 1010 0001 1111 0010 0011 1110 0000  
+B. Shift these two strings relative to one another to maximize the number of matching bits. How many bits match?
+a) 0000000000100 (1111100100011111000)
+b) 01001010000 (1111100100011111000) 00
+
+#### 2.1.4 Representing Strings
+
+- How is a string encoded in C ? >>
+
+#### 2.1.5 Representing Code
+
+- Why is binary code rarely portable across different machines and OS ? >>
+
+#### 2.1.6 Introduction to Boolean Algebra
+
+- What does boolean algebra manage to express ? >>
+- What C characters represent the boolean operations NOT, AND, OR, EXCLUSIVE-OR ? >>
+- What is a bit vector ? >>
+
+#### 2.1.7 Bit-Level Operations in C
 
 ### Integer representation
 
